@@ -18,21 +18,12 @@
 	@END 
 	0;JMP
 (NEGATIVELOOP)
-	@1
-	D=M-1 //D=R1-1 -> -1
-	M=D //R1 = -1 
+	@0
+	D=M
 	@2
-	M=D //R2 = R1 -> -1
-	//criterio de parada => i + R2 = 0
-	@i
-	D=M //D=i
-	@2
-	D=D+M //i + R2 
+	M=-D
 	@END	
-	D;JEQ //if (i + R@) = 0 then goto END  
-	@NEGATIVELOOP
-	0;JMP //else goto NEGATIVELOOP
- 	 	
+	D;JEQ //if (i + R@) = 0 then goto END   	 	
 (END)
 	@END
 	0;JMP 
