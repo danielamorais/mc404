@@ -13,6 +13,7 @@
 	M=M+D //soma do primeiro elemento	
 	@1
 	M=M-1 //tamanho do vetor - 1 = 0 para ir pro end
+	D=M
 	@END 
 	D;JEQ
 	@2
